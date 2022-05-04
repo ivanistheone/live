@@ -1,0 +1,89 @@
+{
+  "name": "jupyter-wren-syntax",
+  "version": "0.1.0",
+  "description": "A JupyterLab extension.",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "homepage": "https://github.com/DerThorsten/jupyter_wren_syntax",
+  "bugs": {
+    "url": "https://github.com/DerThorsten/jupyter_wren_syntax/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Thorsten Beier",
+    "email": "derthorstenbeier@gmail.com"
+  },
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,js,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DerThorsten/jupyter_wren_syntax.git"
+  },
+  "scripts": {
+    "build": "jlpm run build:lib && jlpm run build:labextension:dev",
+    "build:prod": "jlpm run clean && jlpm run build:lib && jlpm run build:labextension",
+    "build:labextension": "jupyter labextension build .",
+    "build:labextension:dev": "jupyter labextension build --development True .",
+    "build:lib": "tsc",
+    "clean": "jlpm run clean:lib",
+    "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
+    "clean:labextension": "rimraf jupyter_wren_syntax/labextension",
+    "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
+    "eslint": "eslint . --ext .ts,.tsx --fix",
+    "eslint:check": "eslint . --ext .ts,.tsx",
+    "install:extension": "jlpm run build",
+    "watch": "run-p watch:src watch:labextension",
+    "watch:src": "tsc -w",
+    "watch:labextension": "jupyter labextension watch ."
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^3.1.0",
+    "@jupyterlab/codemirror": "^3.1.12"
+  },
+  "devDependencies": {
+    "@jupyterlab/builder": "^3.1.0",
+    "@types/codemirror": "0.0.97",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.2",
+    "typescript": "~4.1.3"
+  },
+  "sideEffects": [
+    "style/*.css",
+    "style/index.js"
+  ],
+  "styleModule": "style/index.js",
+  "jupyterlab": {
+    "extension": true,
+    "outputDir": "jupyter_wren_syntax/labextension",
+    "_build": {
+      "load": "static/remoteEntry.a7ffe26201ed2eee8505.js",
+      "extension": "./extension",
+      "style": "./style"
+    }
+  },
+  "jupyter-releaser": {
+    "hooks": {
+      "before-build-npm": [
+        "python -m pip install jupyterlab~=3.1",
+        "jlpm"
+      ]
+    },
+    "skip": [
+      "check-links"
+    ]
+  }
+}

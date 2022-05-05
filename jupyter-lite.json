@@ -131,7 +131,12 @@
     "fullStaticUrl": "./build",
     "licensesUrl": "./lab/api/licenses",
     "mathjaxConfig": "TeX-AMS_CHTML-full,Safe",
-    "preferredPath": "/"
+    "preferredPath": "/",
+    "settingsOverrides": {
+      "@jupyterlab/console-extension:tracker": {
+        "interactionMode": "terminal"
+      }
+    }
   },
   "jupyter-lite-schema-version": 0
 }

@@ -1,5 +1,0 @@
-{
-  "packageManager": "python",
-  "packageName": "jupyterlite_p5_kernel",
-  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package jupyterlite_p5_kernel"
-}

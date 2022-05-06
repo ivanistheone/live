@@ -1,7 +1,7 @@
 {
   "jupyter-config-data": {
-    "appName": "JupyterLite",
-    "appUrl": "./lab",
+    "appName": "SymPy Live",
+    "appUrl": "./repl",
     "appVersion": "0.1.0-beta.7",
     "baseUrl": "./",
     "faviconUrl": "./lab/favicon.ico",

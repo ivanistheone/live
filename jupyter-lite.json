@@ -13,13 +13,6 @@
       {
         "extension": "./extension",
         "liteExtension": false,
-        "load": "static/remoteEntry.730e734f0ef88fa439e8.js",
-        "mimeExtension": "./mimeExtension",
-        "name": "jupyterlab-plotly"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": false,
         "load": "static/remoteEntry.aa1060b2d1221f8e5688.js",
         "name": "jupyterlab_pygments",
         "style": "./style"

@@ -1,7 +1,7 @@
 {
   "jupyter-config-data": {
     "appName": "SymPy Live",
-    "appUrl": "./repl",
+    "appUrl": "./",
     "appVersion": "0.1.0-beta.7",
     "baseUrl": "./",
     "contentsStorageDrivers": [

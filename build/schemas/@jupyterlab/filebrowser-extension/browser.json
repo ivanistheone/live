@@ -104,7 +104,7 @@
       },
       {
         "command": "filebrowser:shutdown",
-        "selector": ".jp-DirListing-item[data-isdir=\"false\"]",
+        "selector": ".jp-DirListing-item[data-isdir=\"false\"].jp-mod-running",
         "rank": 11
       },
       {
@@ -204,6 +204,12 @@
       "type": "boolean",
       "title": "Filter on file name with a fuzzy search",
       "description": "Whether to apply fuzzy algorithm while filtering on file names",
+      "default": true
+    },
+    "filterDirectories": {
+      "type": "boolean",
+      "title": "Filter directories",
+      "description": "Whether to apply the search on directories",
       "default": true
     },
     "showLastModifiedColumn": {

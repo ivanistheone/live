@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "SymPy Live",
     "appUrl": "./repl",
-    "appVersion": "0.1.0-beta.17",
+    "appVersion": "0.1.0",
     "baseUrl": "./",
     "contentsStorageDrivers": [
       "memoryStorageDriver"
@@ -15,6 +15,12 @@
     "enableMemoryStorage": true,
     "faviconUrl": "./lab/favicon.ico",
     "federated_extensions": [
+      {
+        "extension": "./extension",
+        "liteExtension": true,
+        "load": "static/remoteEntry.9769e16943c1366c4972.js",
+        "name": "@jupyterlite/pyodide-kernel-extension"
+      },
       {
         "extension": "./extension",
         "liteExtension": false,
@@ -300,6 +306,13 @@
     "fullMathjaxUrl": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js",
     "fullStaticUrl": "./build",
     "licensesUrl": "./lab/api/licenses",
+    "litePluginSettings": {
+      "@jupyterlite/pyodide-kernel-extension:kernel": {
+        "pipliteUrls": [
+          "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=dada95d1039a199bb4503c6652605f7815ea056b19f3c08a6e78a0c5739f19d4"
+        ]
+      }
+    },
     "mathjaxConfig": "TeX-AMS_CHTML-full,Safe",
     "settingsOverrides": {
       "@jupyterlab/console-extension:tracker": {

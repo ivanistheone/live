@@ -42,6 +42,7 @@
 
   $(document).ready(function() {
     // default iframe src with SymPy initcode
+    // see https://jupyterlite.readthedocs.io/en/stable/quickstart/embed-repl.html#configuration for URL customisation
     var iframe_src = "https://www.sympy.org/live/repl/?toolbar=1&kernel=python&code=from%20sympy%20import%20%2A%0Ainit_printing%28%29%0Ax%2C%20y%2C%20z%2C%20t%20%3D%20symbols%28%27x%20y%20z%20t%27%29%0Ak%2C%20m%2C%20n%20%3D%20symbols%28%27k%20m%20n%27%2C%20integer%3DTrue%29%0Af%2C%20g%2C%20h%20%3D%20symbols%28%27f%20g%20h%27%2C%20cls%3DFunction%29";
     // check if we have additional statements to evaluate in the query string
     var statements = getURLParameter('evaluate');
@@ -94,7 +95,7 @@
           Press ENTER to run the code or use the Run button in the toolbar.
         </p>
         <p id="loading_message">
-          Note it can take up to 30 seconds before the shell finishes loading and is ready to run commands.    
+          Note it can take up to 30 seconds before the shell finishes loading and is ready to run commands.
         </p>
       </div>
   </div>
@@ -121,8 +122,8 @@
     </pre>
   </p>
   <p>
-    SymPy Live shell is powered by <a href="https://jupyterlite.readthedocs.io/en/latest/">JupyterLite</a>.
-    It can take up to 30 seconds before the shell code and libraries load completely and become available for using interactively.    
+    SymPy Live shell is powered by <a href="https://jupyterlite.readthedocs.io/en/stable/">JupyterLite</a>.
+    It can take up to 30 seconds before the shell code and libraries load completely and become available for using interactively.
   </p>
 </div>
 
@@ -143,7 +144,7 @@
       </p>
 
       <p>
-        Read the tutorial in the SymPy docs to learn more about SymPy: 
+        Read the tutorial in the SymPy docs to learn more about SymPy:
         <a href="https://docs.sympy.org/tutorial/">SymPy Tutorial</a>.
       </p>
   </div>

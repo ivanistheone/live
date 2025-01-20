@@ -1,6 +1,6 @@
 {
   "name": "@jupyterlite/pyodide-kernel-extension",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "JupyterLite - Pyodide Kernel Extension",
   "homepage": "https://github.com/jupyterlite/pyodide-kernel",
   "bugs": {
@@ -50,7 +50,7 @@
     "@jupyterlab/coreutils": "^6.1.1",
     "@jupyterlite/contents": "^0.5.0",
     "@jupyterlite/kernel": "^0.5.0",
-    "@jupyterlite/pyodide-kernel": "^0.5.1",
+    "@jupyterlite/pyodide-kernel": "^0.5.2",
     "@jupyterlite/server": "^0.5.0"
   },
   "devDependencies": {
@@ -80,7 +80,7 @@
       }
     },
     "_build": {
-      "load": "static/remoteEntry.14342b5924ead7bb4eab.js",
+      "load": "static/remoteEntry.3ac7f76fb22d01270496.js",
       "extension": "./extension"
     }
   },

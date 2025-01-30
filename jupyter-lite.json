@@ -2,7 +2,7 @@
   "jupyter-config-data": {
     "appName": "SymPy Live",
     "appUrl": "./repl",
-    "appVersion": "0.5.0",
+    "appVersion": "0.5.1",
     "baseUrl": "./",
     "contentsStorageDrivers": [
       "memoryStorageDriver"
@@ -301,7 +301,7 @@
     "litePluginSettings": {
       "@jupyterlite/pyodide-kernel-extension:kernel": {
         "pipliteUrls": [
-          "./pypi/all.json?sha256=5b24a161e0032ef3f02c291450b6830f2b80274d777b061175af1d55c5830d70",
+          "./pypi/all.json?sha256=257dea90a5be3027299239f533e9f702d7cc583acbed47f53c916b761093b733",
           "./extensions/@jupyterlite/pyodide-kernel-extension/static/pypi/all.json?sha256=8410129b75a5560182e60e67735d1efad22cde00c42736ad5f8841351d33b617"
         ]
       }
